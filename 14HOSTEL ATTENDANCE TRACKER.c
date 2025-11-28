@@ -10,7 +10,7 @@
 int main() {
     int A[10][7];
     int studentSum[10] = {0};
-    int daySum[7] = {0};//
+    int daySum[7] = {0};
     printf("Enter attendance for 10 students (1 = Present, 0 = Absent):\n");
     for (int i = 0; i < 10; i++) {
         printf("Student %d: ", i + 1);
@@ -54,3 +54,4 @@ int main() {
 
     return 0;
 }
+
