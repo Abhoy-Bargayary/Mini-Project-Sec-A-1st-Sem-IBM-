@@ -9,25 +9,17 @@ int main() {
     int n, m;
     cin >> n >> m;//n: no of students, m:no. of days
 
-    int bill[n][m];        // assuming max 100 students and 100 days
+    int bill[n][m];        
     int studentTotal[n]={0};
     int dayTotal[m]={0};
 
-    // Initialize totals
-    // for (int i = 0; i < n; i++)
-    //     studentTotal[i] = 0;
-
-    // for (int j = 0; j < m; j++)
-    //     dayTotal[j] = 0;
-
-    // Input the 2D array
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
             cin >> bill[i][j];
         }
     }
 
-    // Calculate totals
+    
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
             studentTotal[i] += bill[i][j];
@@ -35,12 +27,12 @@ int main() {
         }
     }
 
-    // Output each student's total
+    
     for (int i = 0; i < n; i++) {
         cout << "Student " << i + 1 << " total: Rs. " << studentTotal[i] << endl;
     }
 
-    // Find day with highest total
+    
     int maxDay = 0;
     for (int j = 1; j < m; j++) {
         if (dayTotal[j] > dayTotal[maxDay]) {
@@ -49,7 +41,7 @@ int main() {
     }
     cout << "Highest collection on Day " << maxDay + 1 << endl;
 
-    // Find highest spending student(s)
+    
     int maxSpend = studentTotal[0];
     for (int i = 1; i < n; i++) {
         if (studentTotal[i] > maxSpend) {
