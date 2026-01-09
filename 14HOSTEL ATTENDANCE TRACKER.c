@@ -8,9 +8,9 @@
 #include <stdio.h>
 
 int main() {
-    int A[10][7];//stores attendance
-    int studentSum[10] = {0};//7 dino mein ek student kitne bar present 
-    int daySum[7] = {0};//1 din mein kitne student present
+    int A[10][7];
+    int studentSum[10] = {0}; 
+    int daySum[7] = {0};
     printf("Enter attendance for 10 students (1 = Present, 0 = Absent):\n");
     for (int i = 0; i < 10; i++) {
         printf("Student %d: ", i + 1);
@@ -25,8 +25,8 @@ int main() {
             daySum[j] += A[i][j];
         }
     }
-    int maxAttendance = studentSum[0];//attendence of student 1
-    int topStudent = 1;//assuming student 1 has the highest attendance
+    int maxAttendance = studentSum[0];
+    int topStudent = 1;
 
     for (int i = 1; i < 10; i++) {
         if (studentSum[i] > maxAttendance) {
