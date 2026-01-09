@@ -7,7 +7,7 @@ using namespace std;
 
 int main() {
     int n, m;
-    cin >> n >> m;//n: no of students, m:no. of days
+    cin >> n >> m;
 
     int bill[n][m];       
     int studentTotal[n]={0};
@@ -19,21 +19,21 @@ int main() {
         }
     }
 
-    // Calculate totals
+    
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < m; j++) {
-            studentTotal[i] += bill[i][j];//pure given dino mein kitna krcha kiya
-            dayTotal[j] += bill[i][j];//ek din ka kitna kamaya
+            studentTotal[i] += bill[i][j];
+            dayTotal[j] += bill[i][j];
         }
     }
 
-    // Output each student's total
+    
     for (int i = 0; i < n; i++) {
         cout << "Student " << i + 1 << " total: Rs. " << studentTotal[i] << endl;
     }
 
-    // Find day with highest total
-    int maxDay = 0;//holds the index of currently highest total
+    
+    int maxDay = 0;
     for (int j = 1; j < m; j++) {
         if (dayTotal[j] > dayTotal[maxDay]) {
             maxDay = j;
@@ -43,8 +43,8 @@ int main() {
     
     cout << "Highest collection on Day " << maxDay + 1 << endl;
 
-    // Find highest spending student(s)
-    int maxSpend = studentTotal[0];//assume student 1
+    
+    int maxSpend = studentTotal[0];
     for (int i = 1; i < n; i++) {
         if (studentTotal[i] > maxSpend) {
             maxSpend = studentTotal[i];
